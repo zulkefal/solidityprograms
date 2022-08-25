@@ -1,6 +1,3 @@
-// SPDX-License-Identifier: GPL-3.0
-import "hardhat/console.sol";
-
 pragma solidity ^0.8.7;
 
 contract prac
