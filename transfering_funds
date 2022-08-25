@@ -1,0 +1,25 @@
+
+pragma solidity ^0.8.7;
+
+contract prac
+{
+    address payable owner;
+    mapping (address => uint) public mp;
+    constructor ()
+    {
+        owner = payable (msg.sender);
+    }
+    // function to return the balance of sender
+    function getbalance() public view returns (uint)
+    {
+        return msg.sender.balance;
+    }
+    // function to send 1 ether to msg sender
+     function transfer_money_to_sender() public payable
+    {
+      require (mp[msg.sender] <= 4 , "Enough Larkay");
+         mp[msg.sender]+=1;
+         payable (msg.sender).transfer(1 ether);
+    }
+
+}
