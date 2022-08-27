@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.7;
+
+contract struct_concept
+{
+    struct User
+    {
+        string Name;
+        string email;
+        uint age;
+        uint phone;
+    }
+
+    User [] user;
+    uint index;
+
+    function add_user(string memory _name, string memory _email, uint _age, uint _phone) public
+    {
+        user[index].name=_name;
+    }
+    
+}
